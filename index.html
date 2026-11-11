@@ -2,11 +2,123 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actividad 3 de Fundamentos de Sistemas Web: versionamiento con Git y GitHub.">
     <title>Mi proyecto Git - Enid Robles</title>
 </head>
 
 <body>
-    <h1>Mi proyecto Git</h1>
-    <p id="presentacion">Actividad 3 de Fundamentos de Sistemas Web: llevar el control de los cambios de un proyecto con Git y publicarlo en GitHub.</p>
+
+    <header>
+        <h1>Mi proyecto Git</h1>
+        <p id="presentacion">
+            Actividad 3 de Fundamentos de Sistemas Web: llevar el control de
+            los cambios de un proyecto con Git y publicarlo en GitHub.
+        </p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h3>Datos de la estudiante</h3>
+            <dl>
+                <dt>Nombre</dt>
+                <dd>Enid Robles</dd>
+
+                <dt>Universidad</dt>
+                <dd>Universidad de las Fuerzas Armadas ESPE</dd>
+
+                <dt>Carrera</dt>
+                <dd>Ingeniería en Tecnologías de la Información</dd>
+
+                <dt>Asignatura</dt>
+                <dd>Fundamentos de Sistemas Web, NRC 36751</dd>
+
+                <dt>Periodo</dt>
+                <dd>Septiembre 2026 – Febrero 2027</dd>
+            </dl>
+        </div>
+
+        <h2>Cómo trabajé el proyecto</h2>
+        <p>
+            Estos son los pasos que seguí, en el orden en que los hice.
+            Cada uno dejó una evidencia en la terminal o en GitHub.
+        </p>
+
+        <ol>
+            <li>
+                <strong>Configuré Git.</strong>
+                Le indiqué mi nombre y correo para que cada commit quede a mi nombre.
+                <code>git config --global user.name "Enid Robles"</code>
+            </li>
+            <li>
+                <strong>Creé el repositorio local.</strong>
+                En la carpeta mi_proyecto_git creé este archivo index.html
+                e inicié el repositorio.
+                <code>git init</code>
+            </li>
+            <li>
+                <strong>Hice el primer commit.</strong>
+                Pasé el archivo al área de preparación y guardé la primera versión.
+                <code>git add index.html
+git commit -m "Crea index.html con la estructura basica"</code>
+            </li>
+            <li>
+                <strong>Modifiqué el archivo.</strong>
+                Agregué un título y un párrafo de presentación y guardé el cambio
+                en un nuevo commit.
+                <code>git commit -m "Agrega titulo y parrafo de presentacion"</code>
+            </li>
+            <li>
+                <strong>Agregué el contenido y un README.</strong>
+                Escribí mis datos y el resumen del trabajo, y un README que describe
+                el proyecto. Cada cosa quedó en su propio commit.
+                <code>git commit -m "Agrega datos de Enid Robles y pasos del trabajo"
+git commit -m "Agrega README con la descripcion del proyecto"</code>
+            </li>
+            <li>
+                <strong>Trabajé los estilos en una rama aparte.</strong>
+                Así probé el diseño sin tocar la versión principal, y después
+                fusioné la rama con main.
+                <code>git checkout -b estilos
+git commit -m "Agrega estilos CSS con los colores de la ESPE"
+git checkout main
+git merge estilos</code>
+            </li>
+            <li>
+                <strong>Publiqué en GitHub.</strong>
+                Creé un repositorio público, lo vinculé con el local y subí
+                la rama principal y la rama de estilos.
+                <code>git remote add origin https://github.com/enidrobles/mi_proyecto_git.git
+git push -u origin main
+git push origin estilos</code>
+            </li>
+        </ol>
+
+        <h2>Lo que aprendí</h2>
+        <p>
+            Git no guarda el archivo cada vez que lo edito. Primero trabajo en mi
+            carpeta, luego elijo qué cambios quiero guardar con <em>git add</em> y
+            después los confirmo con <em>git commit</em>. Así el historial cuenta
+            qué cambió y cuándo, y puedo volver a una versión anterior si me equivoco.
+        </p>
+        <p>
+            Las ramas me permiten probar un cambio sin arriesgar lo que ya funciona,
+            y GitHub guarda una copia del historial en internet. Con
+            <em>git push</em> envío mis commits ahí, y como el repositorio es
+            público, cualquier persona con el enlace puede revisarlo.
+        </p>
+
+        <div class="card card_destacada">
+            <h3>Repositorio en GitHub</h3>
+            <p>
+                <a href="https://github.com/enidrobles/mi_proyecto_git">github.com/enidrobles/mi_proyecto_git</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        Enid Robles, Fundamentos de Sistemas Web, NRC 36751, 2026
+    </footer>
+
 </body>
 </html>
